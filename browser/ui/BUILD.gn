@@ -24,6 +24,7 @@ source_set("ui") {
       "brave_browser_command_controller.h",
       "brave_browser_content_setting_bubble_model_delegate.cc",
       "brave_browser_content_setting_bubble_model_delegate.h",
+      "brave_browser_dialogs.h",
       "brave_dark_mode_observer.cc",
       "brave_dark_mode_observer.h",
       "brave_layout_constants.cc",
@@ -59,6 +60,9 @@ source_set("ui") {
 
   if (toolkit_views) {
     sources += [
+      "views/ads_notification_view.cc",
+      "views/ads_notification_view.h",
+      "views/brave_browser_dialogs_views.cc",
       "views/brave_layout_provider.cc",
       "views/brave_layout_provider.h",
       "views/download/brave_download_item_view.cc",

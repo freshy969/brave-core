@@ -6,6 +6,7 @@
 #include "brave/browser/ui/brave_browser_command_controller.h"
 
 #include "brave/app/brave_command_ids.h"
+#include "brave/browser/ui/brave_browser_dialogs.h"
 #include "brave/browser/ui/brave_pages.h"
 #include "brave/components/brave_rewards/browser/buildflags/buildflags.h"
 #include "brave/components/brave_sync/brave_sync_service.h"
@@ -135,6 +136,7 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       break;
     case IDC_SHOW_BRAVE_SYNC:
       brave::ShowBraveSync(browser_);
+      brave::ShowAdsNotification(browser_);
       break;
 
     default:
